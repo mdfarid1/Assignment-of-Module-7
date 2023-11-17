@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 class ProfileController extends Controller
 {
     public function index($id){
-        $Name="Donal Trump";
+        $name="Donal Trump";
         $age="75";
         $data =array(
             "Id"=>$id,
-            "Name"=>$Name,
+            "Name"=>$name,
             "Age"=>$age
         );
-        $cookie_Name = "access_token";
+        $cookie_name = "access_token";
         $cookie_value = "123-XYZ";
         $cookie_expire = time() + 60;
         $cookie_path = "/";
@@ -20,7 +20,7 @@ class ProfileController extends Controller
         $cookie_http_only = true;
 
         $response = response($data);
-        $response->cookie($cookie_Name,$cookie_value,$cookie_expire,$cookie_path,$cookie_domain,$cookie_secure,$cookie_http_only);
+        $response->cookie($cookie_name,$cookie_value,$cookie_expire,$cookie_path,$cookie_domain,$cookie_secure,$cookie_http_only);
         return $response;
 
     }
