@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\UseController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get("/welcome",[UseController::class,"welcome"]);
-
-Route::get("/",[UseController::class,"welcome"]);
+Route::get("/profile/{id}",[ProfileController::class,"index"]);
 
